@@ -1,0 +1,374 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Vollkorn', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* HEADER */
+
+header.header {
+    background: linear-gradient(135deg, #FA804D, #D68B6D);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    grid-area: header;
+}
+
+a.logo {
+    font-size: 2.25em;
+    max-width: 200px;
+    color: white;
+}
+
+header.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header.header nav ul li a {
+    display: block;
+    font-size: 1.125em;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s ease-in;
+}
+
+header.header nav ul li + li {
+    margin-left: 15px;
+}
+
+header.header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.5);
+}
+
+/* MAIN */
+
+main.main {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 30px;
+    grid-area: main;
+}
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+/* TITULO */
+
+main.main {
+    color: #D68B6D;
+}
+
+main.main h1 {
+    font-size: 3.75em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+main.main span {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/* CARACTERÍSTICAS */
+
+main.main .features {
+    display: flex;
+    margin: 0 auto;
+}
+
+main.main .features span {
+    display: block;
+}
+
+main.main .features > div {
+    width: 120px;
+    background: linear-gradient(135deg, #FA804D, #D68B6D);
+    color: #D68B6D;
+    border-radius: 5px;
+    box-shadow: 20px 20px 15px 0px rgba(44, 44, 44, 0.15);
+    text-align: center;
+    align-self: start;
+}
+
+main.main .features > div + div {
+    margin-left: 30px;
+}
+
+main.main .features .number {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 10px auto;
+    color: wheat;
+}
+
+main.main .features .label {
+    font-size: 1em;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+}
+
+/* DESTAQUE */
+
+main.main .spotLight {
+    max-width: 16em;
+    font-size: 0.975em;
+    color: #D68B6D;
+    margin: 0 auto;
+}
+
+/* CITAÇÃO / ATRIBUTOS */
+
+main.main .quote, main.main .attributes {
+    background: linear-gradient(135deg, #FA804D, #D68B6D);
+    border-radius: 5px;
+    box-shadow: 20px 20px 15px 0px rgba(44, 44, 44, 0.15);
+    padding: 30px;
+}
+
+main.main .quote p {
+    max-width: 500px;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+main.main .attributes {
+    align-self: start;
+}
+
+main.main .attributes h2 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+main.main .attributes li {
+    font-size: 1.125em;
+    font-family: Courier, monospace;
+    color: #ffffff;
+    padding: 15px;
+}
+
+main.main .attributes li + li {
+    border-top: 2px solid #D68B6D;
+}
+
+/* IMAGENS */
+
+main.main img.imageOne {
+    width: 545px;
+    grid-row: span 2;
+    align-self: end;
+}
+
+main.main img.imageTwo {
+    align-self: end;
+}
+
+/* PARAGRAFOS */
+
+main.main .information {
+    display: grid;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+main.main p {
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+main.main .information p + p {
+    margin-top: 30px;
+}
+
+/* FOOTER */
+
+footer.footer {
+    background: linear-gradient(135deg, #FA804D, #D68B6D);
+    padding: 30px;
+    grid-area: footer;
+}
+
+footer.footer p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE - TABLETS */
+
+/* GRID GERAL */
+
+@media (max-width: 1200px) {
+    article.container-general {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+            "header header"
+            "sidenav main"
+            "sidenav adverts"
+            "footer footer"
+        ;
+    }
+}
+
+/* RESPONSIVIDADE - SMARTPHONES */
+
+/* HEADER */
+
+@media (max-width: 950px) {
+    header.header {
+        grid-template-columns: auto;
+        gap: 30px;
+        justify-items: center;
+    }
+    
+    header.header nav ul li a {
+        font-size: 1em;
+    }
+}
+
+/* MAIN */
+
+@media (max-width: 650px) {
+    main.main {
+        grid-template-columns: 1fr;
+    }
+
+    main.main .features {
+        margin: 0;
+    }
+
+    main.main .spotLight {
+        font-size: 1.225em;
+    }
+}
+
+/* LOADBAR */
+
+.loadbar {
+    width: 0px;
+    height: 3px;
+    background: linear-gradient(135deg, #FA804D, #D68B6D);
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: loading 10s ease-in;
+}
+
+/* SCROLL-UP */
+
+.scrollTop {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #FA804D;
+    box-shadow: 20px 20px 15px 0px rgba(44, 44, 44, 0.15);
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.scrollTop:hover {
+    animation: borderColor 5s infinite ease-in-out;
+}
+
+.scrollTop i {
+    position: relative;
+    animation: upDown 0.5s infinite ease-in-out alternate;
+}
+
+.visible {
+    display: flex;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes upDown {
+    from {
+
+        bottom: 5px;
+    }
+
+    to {
+        bottom: -5px;
+    }
+}
+
+@keyframes borderColor {
+    0%, 100% {
+        border: 3px solid #FA804D;
+    }
+
+    50% {
+        border: 3px solid #d37bff;
+    }
+}
+
+@keyframes loading {
+    0% {  
+        width: 0%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes leftRight {
+    from {
+        right: 25px;
+    }
+
+    to {
+        right: 5px;
+    }
+}
